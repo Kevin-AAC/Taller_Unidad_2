@@ -42,13 +42,7 @@ public class Principal {
         }
 
     }
-//    public void AgregarAnimal() {
-//        Animal leon = new Animal("Leon","Macho","Terrestre");
-//        Animal Pez = new Animal("Pez_Globo","Macho","Acuatico");
-//
-//        animales.add(leon);
-//        animales.add(Pez);
-//    }
+
     public void Mostar(){
         System.out.println("\n---------------------------------------------");
         System.out.println("     🐾 CLASIFICACIÓN DE ANIMALES 🐾");
