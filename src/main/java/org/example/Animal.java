@@ -36,6 +36,6 @@ public class Animal {
     }
     @Override
     public String toString() {
-        return nombre + " " + genero + " " + tipo;
+        return nombre;
     }
 }

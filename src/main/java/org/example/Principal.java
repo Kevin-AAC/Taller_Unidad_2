@@ -27,7 +27,7 @@ public class Principal {
     }
     public void Mostar(){
         for (Map.Entry<String, List<Animal>> entry : clasificacion.entrySet()) {
-            System.out.println("Categoría: " + entry.getKey());
+            System.out.println(entry.getKey());
             for (Animal a : entry.getValue()) {
                 System.out.println("  - " + a);
             }
