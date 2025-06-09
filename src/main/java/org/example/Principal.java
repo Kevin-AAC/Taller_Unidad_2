@@ -11,7 +11,7 @@ public class Principal {
     }
     public void AgregarAnimalConsola(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Registro de Animales");
+        System.out.println("Registro de Animales, escriba Salir en nombre para terminar ");
         while (true){
             System.out.println("Ingrese el Nombre del Animal: ");
             String nombre = sc.nextLine();
@@ -26,10 +26,8 @@ public class Principal {
 
             Animal animal = new Animal(nombre, tipo, genero);
             animales.add(animal);
-            for(Animal a : animales) {
-                String categoria = a.getTipo();
-                clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(a);
-            }
+
+            clasificacion.computeIfAbsent(tipo, k -> new ArrayList<>()).add(animal);
             System.out.println("✅ Animal registrado correctamente.\n");
         }
 
