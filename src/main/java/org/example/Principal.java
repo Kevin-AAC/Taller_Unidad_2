@@ -23,6 +23,12 @@ public class Principal {
 
             System.out.println("Ingrese el Tipo de animal (terrestre, aéreo, acuático): ");
             String tipo = sc.nextLine();
+            if (!tipo.equalsIgnoreCase("Terrestre")&&
+                !tipo.equalsIgnoreCase("Acuatico")&&
+                !tipo.equalsIgnoreCase("Aereo")){
+                System.out.println("Tipo de animal **" + tipo + "** no es valido");
+                continue;
+            };
 
             System.out.println("Ingrese el Genero (masculino, femenino): ");
             String genero = sc.nextLine();
