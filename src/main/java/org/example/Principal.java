@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Principal {
     private Map<String, List<Animal>> clasificacion;
@@ -12,19 +9,33 @@ public class Principal {
         clasificacion = new HashMap<>();
         animales = new ArrayList<>();
     }
-    public void AgregarAnimal() {
-        Animal leon = new Animal("Leon","Macho","Terrestre");
-        Animal Pez = new Animal("Pez_Globo","Macho","Acuatico");
+    public void AgregarAnimalConsola(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el primer animal: ");
 
-        animales.add(leon);
-        animales.add(Pez);
+        System.out.println("Ingrese el Nombre: ");
+        String nombre = sc.nextLine();
 
+        System.out.println("Ingrese el Tipo de animal (terrestre, aéreo, acuático): ");
+        String tipo = sc.nextLine();
+
+        System.out.println("Ingrese el Genero (masculino, femenino): ");
+        String genero = sc.nextLine();
+
+        Animal animal = new Animal(nombre, tipo, genero);
+        animales.add(animal);
         for(Animal a : animales) {
             String categoria = a.getTipo();
             clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(a);
         }
-
     }
+//    public void AgregarAnimal() {
+//        Animal leon = new Animal("Leon","Macho","Terrestre");
+//        Animal Pez = new Animal("Pez_Globo","Macho","Acuatico");
+//
+//        animales.add(leon);
+//        animales.add(Pez);
+//    }
     public void Mostar(){
         for (Map.Entry<String, List<Animal>> entry : clasificacion.entrySet()) {
             System.out.println(entry.getKey());
