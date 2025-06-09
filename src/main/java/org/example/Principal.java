@@ -12,7 +12,7 @@ public class Principal {
         clasificacion = new HashMap<>();
         animales = new ArrayList<>();
     }
-    public void AgregarAnimal(Animal animal) {
+    public void AgregarAnimal() {
         Animal leon = new Animal("Leon","Macho","Terrestre");
         Animal Pez = new Animal("Pez_Globo","Macho","Acuatico");
 
@@ -21,7 +21,7 @@ public class Principal {
 
         for(Animal a : animales) {
             String categoria = a.getTipo();
-            clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(animal);
+            clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(a);
         }
 
     }
