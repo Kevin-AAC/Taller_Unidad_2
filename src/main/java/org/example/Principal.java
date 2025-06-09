@@ -11,7 +11,11 @@ public class Principal {
     }
     public void AgregarAnimalConsola(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Registro de Animales, escriba Salir en nombre para terminar ");
+        System.out.println("============================================================");
+        System.out.println("Registro de Animales");
+        System.out.println("Escriba salir en nombre de animal para terminar los registros ");
+        System.out.println("************************************************************");
+
         while (true){
             System.out.println("Ingrese el Nombre del Animal: ");
             String nombre = sc.nextLine();
@@ -28,7 +32,7 @@ public class Principal {
             animales.add(animal);
 
             clasificacion.computeIfAbsent(tipo, k -> new ArrayList<>()).add(animal);
-            System.out.println("✅ Animal registrado correctamente.\n");
+            System.out.println("🟢Animal registrado correctamente.🟢\n");
         }
 
     }
@@ -40,6 +44,10 @@ public class Principal {
 //        animales.add(Pez);
 //    }
     public void Mostar(){
+        System.out.println("\n---------------------------------------------");
+        System.out.println("     🐾 CLASIFICACIÓN DE ANIMALES 🐾");
+        System.out.println("---------------------------------------------\n");
+
         for (Map.Entry<String, List<Animal>> entry : clasificacion.entrySet()) {
             System.out.println(entry.getKey());
             for (Animal a : entry.getValue()) {
