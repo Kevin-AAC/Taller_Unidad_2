@@ -11,23 +11,28 @@ public class Principal {
     }
     public void AgregarAnimalConsola(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el primer animal: ");
+        System.out.println("Registro de Animales");
+        while (true){
+            System.out.println("Ingrese el Nombre del Animal: ");
+            String nombre = sc.nextLine();
+            if (nombre.equalsIgnoreCase("salir")) break;
 
-        System.out.println("Ingrese el Nombre: ");
-        String nombre = sc.nextLine();
+            System.out.println("Ingrese el Tipo de animal (terrestre, aéreo, acuático): ");
+            String tipo = sc.nextLine();
 
-        System.out.println("Ingrese el Tipo de animal (terrestre, aéreo, acuático): ");
-        String tipo = sc.nextLine();
+            System.out.println("Ingrese el Genero (masculino, femenino): ");
+            String genero = sc.nextLine();
 
-        System.out.println("Ingrese el Genero (masculino, femenino): ");
-        String genero = sc.nextLine();
 
-        Animal animal = new Animal(nombre, tipo, genero);
-        animales.add(animal);
-        for(Animal a : animales) {
-            String categoria = a.getTipo();
-            clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(a);
+            Animal animal = new Animal(nombre, tipo, genero);
+            animales.add(animal);
+            for(Animal a : animales) {
+                String categoria = a.getTipo();
+                clasificacion.computeIfAbsent(categoria, k -> new ArrayList<>()).add(a);
+            }
+            System.out.println("✅ Animal registrado correctamente.\n");
         }
+
     }
 //    public void AgregarAnimal() {
 //        Animal leon = new Animal("Leon","Macho","Terrestre");
