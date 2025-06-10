@@ -64,4 +64,10 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+    @Override
+    public String toString() {
+        return nombre + " " + apellido + ", Edad: " + edad +
+                ", Género: " + genero + ", Sueldo/Hora: $" + sueldoHora +
+                ", Cargo: " + cargo;
+    }
 }
