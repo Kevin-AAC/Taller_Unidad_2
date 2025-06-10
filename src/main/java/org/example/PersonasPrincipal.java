@@ -52,7 +52,7 @@ public class PersonasPrincipal {
             sumaEdad += p.getEdad();
         }
         double promedio = (double) sumaEdad / personas.size();
-        System.out.printf("La edad promedio es: %.2f años%n", promedio);
+        System.out.println("La edad promedio es:"+ promedio);
 
     }
     public void MayoresDeEdadPersona() {
@@ -62,7 +62,14 @@ public class PersonasPrincipal {
                 sumaEdad ++;
             }
         }
-        System.out.printf("Numero de mayores de edad: ", sumaEdad);
+        System.out.println("Numero de mayores de edad: "+ sumaEdad);
+    }
+    public void PersonasConInicialA(){
+        for (Persona persona : personas) {
+            if (persona.getNombre().startsWith("A")) {
+                System.out.println("Personas cuyos nombres empiecen con “A”: \n " + persona.getNombre() +" "+ persona.getApellido());
+            }
+        }
     }
 
 }
