@@ -5,11 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PersonasPrincipal {
-    Scanner scanner = new Scanner(System.in);
+
     private List<Persona> personas = new ArrayList<>();
 
 
     public void AgregarPersona() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese un Nombre: ");
         String nombre = scanner.nextLine();
         System.out.println("Ingrese un Apellido: ");

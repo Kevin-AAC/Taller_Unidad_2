@@ -8,7 +8,7 @@ public class Persona {
     private int sueldoHora;
     private String cargo;
 
-    public Persona(String nombre, String cargo, int sueldoHora, String genero, int edad, String apellido) {
+    public Persona(String nombre, String apellido,int edad, String genero,int sueldoHora,String cargo) {
         this.nombre = nombre;
         this.cargo = cargo;
         this.sueldoHora = sueldoHora;
@@ -66,8 +66,6 @@ public class Persona {
     }
     @Override
     public String toString() {
-        return nombre + " " + apellido + ", Edad: " + edad +
-                ", Género: " + genero + ", Sueldo/Hora: $" + sueldoHora +
-                ", Cargo: " + cargo;
+        return nombre + " " + apellido + ", Edad: " + edad + ", Género: " + genero + ", Sueldo/Hora: $" + sueldoHora + ", Cargo: " + cargo;
     }
 }
