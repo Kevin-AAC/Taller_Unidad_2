@@ -50,12 +50,19 @@ public class PersonasPrincipal {
         int sumaEdad = 0;
         for(Persona p : personas) {
             sumaEdad += p.getEdad();
-
         }
         double promedio = (double) sumaEdad / personas.size();
         System.out.printf("La edad promedio es: %.2f años%n", promedio);
 
-
+    }
+    public void MayoresDeEdadPersona() {
+        int sumaEdad = 0;
+        for(Persona p : personas) {
+            if(p.getEdad() >=18 ) {
+                sumaEdad ++;
+            }
+        }
+        System.out.printf("Numero de mayores de edad: ", sumaEdad);
     }
 
 }
