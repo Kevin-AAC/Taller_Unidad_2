@@ -72,4 +72,13 @@ public class PersonasPrincipal {
         }
     }
 
+    public void ApellidosContenganM(){
+        for (Persona persona : personas) {
+            if (persona.getApellido().contains("M")) {
+                System.out.println("Personas cuyos apellidos contengan “M”: \n " + persona.getNombre() +" "+ persona.getApellido());
+            }
+        }
+    }
+
+
 }
