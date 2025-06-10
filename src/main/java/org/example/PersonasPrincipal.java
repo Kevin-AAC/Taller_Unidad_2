@@ -8,7 +8,6 @@ public class PersonasPrincipal {
     Scanner scanner = new Scanner(System.in);
     private List<Persona> personas = new ArrayList<>();
 
-
     public void AgregarPersona() {
 
         System.out.println("============================================================");
@@ -46,6 +45,17 @@ public class PersonasPrincipal {
     }
     public void CantidadPersonas() {
         System.out.println("\nTotal de personas registradas: " + personas.size());
+    }
+    public void PromedioEdadPersona() {
+        int sumaEdad = 0;
+        for(Persona p : personas) {
+            sumaEdad += p.getEdad();
+
+        }
+        double promedio = (double) sumaEdad / personas.size();
+        System.out.printf("La edad promedio es: %.2f años%n", promedio);
+
+
     }
 
 }
