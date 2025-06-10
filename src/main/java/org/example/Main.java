@@ -9,6 +9,7 @@ public class Main {
         PersonasPrincipal app = new PersonasPrincipal();
         app.AgregarPersona();
         app.MostrarPersonas();
+        app.CantidadPersonas();
     }
 
 

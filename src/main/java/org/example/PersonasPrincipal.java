@@ -39,10 +39,13 @@ public class PersonasPrincipal {
 
     }
     public void MostrarPersonas() {
-        System.out.println("\n📋 Lista de personas registradas:");
+        System.out.println("\nLista de personas registradas:");
         for (Persona persona : personas) {
             System.out.println(persona);
         }
+    }
+    public void CantidadPersonas() {
+        System.out.println("\nTotal de personas registradas: " + personas.size());
     }
 
 }
