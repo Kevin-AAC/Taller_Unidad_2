@@ -26,5 +26,11 @@ public class PersonasPrincipal {
         System.out.println("✅ Persona agregada correctamente.\n");
 
     }
+    public void MostrarPersonas() {
+        System.out.println("\n📋 Lista de personas registradas:");
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+    }
 
 }
