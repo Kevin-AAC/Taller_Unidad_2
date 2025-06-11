@@ -86,7 +86,7 @@ public class PersonasPrincipal {
                 .filter(persona -> persona.getCargo().equalsIgnoreCase("director"))
                 .filter(persona -> persona.getGenero().equalsIgnoreCase("masculino"))
                         .peek(persona -> System.out.println(
-                                "Nombre: "+persona.getNombre()+" "+persona.getApellido() + " | Sueldo por 8 horas :$ "+persona.getSueldoHora()
+                                "Nombre: "+persona.getNombre()+" "+persona.getApellido() + " | Sueldo por 8 horas :$ "+persona.getSueldoHora()*8
                         ))
                 .forEach(persona -> {});
         System.out.println("====================================");
