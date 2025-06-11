@@ -93,6 +93,14 @@ public class PersonasPrincipal {
                 .forEach(persona -> {});
         System.out.println("====================================");
     }
+    public void PersonaDesarrollador(){
+        System.out.println("Primera persona desarrolladora de género femenino:");
+        personas.stream()
+                .filter(persona -> persona.getCargo().equalsIgnoreCase("Desarrollador"))
+                .filter(persona -> persona.getGenero().equalsIgnoreCase("femenino"))
+                .findFirst()
+                .ifPresent(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+    }
 
 
 }
