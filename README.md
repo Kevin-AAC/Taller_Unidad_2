@@ -52,6 +52,30 @@ b. Usando findFirst, filter, muestra la primera persona que sea “desarrollador
 c. Muestre la persona con cargo de desarrollador que más gana por hora. Crea un atributo llamado masGana de tiempo Optional luego convierte la lista en un stream, usa filter como operación intermedia y max como función terminal, luego crea un condicional que evalue masGana.isPresent() y en caso tal de ser true, imprima los datos de esa persona  
 Nota: lee sobre la clase Optional para recordar sus características.  
 d. Usa sorted para mostrar todas las mujeres ordenadas por su nombre. Usa dentro de sorted Comparator con el método comparing.  
+  
+## Nota  
+Control de Ejecución  
+Para finalizar el registro de personas o animales en cualquier momento:  
+
+Cuando el sistema solicite ingresar un nombre, escribe:  
+salir  
+
+Esto detendrá inmediatamente el proceso de registro.  
+```  
+Registro de Animales
+Escriba salir en nombre de animal para terminar los registros 
+************************************************************
+Ingrese el Nombre del Animal: 
+salir
+```
+```
+============================================================
+Registro de Personas
+Escriba salir en nombre para terminar los registros 
+************************************************************
+Ingrese un Nombre: 
+salir
+```
 
 ## Salida en consola ejercicio 1
 ```bash
