@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class PersonasPrincipal {
@@ -100,6 +101,18 @@ public class PersonasPrincipal {
                 .filter(persona -> persona.getGenero().equalsIgnoreCase("femenino"))
                 .findFirst()
                 .ifPresent(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+    }
+    public void MayorSueldoHoraDesarrollador(){
+        Optional<Persona>MasGana = personas.stream()
+                .filter(persona -> persona.getCargo().equalsIgnoreCase("Desarrollador"))
+                .max((persona1, persona2)->Double.compare(persona1.getSueldoHora(), persona2.getSueldoHora()));
+        if(MasGana.isPresent()){
+            Persona desarrollador = MasGana.get();
+            System.out.println("Desarrolador que mas gana por hora:");
+            System.out.println(desarrollador.getNombre() + " " + desarrollador.getApellido());
+            System.out.println("Sueldo por hora: $" + desarrollador.getSueldoHora());
+
+        }
     }
 
 
