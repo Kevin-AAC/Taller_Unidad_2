@@ -98,6 +98,7 @@ public class PersonasPrincipal {
                 .filter(persona -> persona.getGenero().equalsIgnoreCase("femenino"))
                 .findFirst()
                 .ifPresent(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+        System.out.println("================================================");
     }
     public void MayorSueldoHoraDesarrollador(){
         Optional<Persona>MasGana = personas.stream()
@@ -108,6 +109,7 @@ public class PersonasPrincipal {
             System.out.println("Desarrolador que mas gana por hora:");
             System.out.println(desarrollador.getNombre() + " " + desarrollador.getApellido());
             System.out.println("Sueldo por hora: $" + desarrollador.getSueldoHora());
+            System.out.println("===============================================");
 
         }
     }
