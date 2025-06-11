@@ -66,7 +66,7 @@ public class PersonasPrincipal {
     public void PersonasConInicialA(){
         System.out.println("Personas cuyos nombres empiecen con “A”:");
         personas.stream()
-                .filter(persona -> persona.getNombre().startsWith("A"))
+                .filter(persona -> persona.getNombre().startsWith("A")|| persona.getNombre().startsWith("a"))
                 .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
         System.out.println("====================================");
     }
@@ -74,7 +74,7 @@ public class PersonasPrincipal {
     public void ApellidosContenganM(){
         System.out.println("Personas cuyos apellidos contengan “M”:");
         personas.stream()
-                .filter(persona -> persona.getApellido().contains("m"))
+                .filter(persona -> persona.getApellido().toLowerCase().contains("m"))
                 .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
         System.out.println("====================================");
 
