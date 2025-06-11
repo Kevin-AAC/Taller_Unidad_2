@@ -63,19 +63,18 @@ public class PersonasPrincipal {
         System.out.println("Numero de mayores de edad: "+ mayores);
     }
     public void PersonasConInicialA(){
-        for (Persona persona : personas) {
-            if (persona.getNombre().startsWith("A")) {
-                System.out.println("Personas cuyos nombres empiecen con “A”: \n " + persona.getNombre() +" "+ persona.getApellido());
-            }
-        }
+        System.out.println("Personas cuyos nombres empiecen con “A”:");
+        personas.stream()
+                .filter(persona -> persona.getNombre().startsWith("A"))
+                .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
     }
 
     public void ApellidosContenganM(){
-        for (Persona persona : personas) {
-            if (persona.getApellido().contains("M")) {
-                System.out.println("Personas cuyos apellidos contengan “M”: \n " + persona.getNombre() +" "+ persona.getApellido());
-            }
-        }
+        System.out.println("Personas cuyos apellidos contengan “M”:");
+        personas.stream()
+                .filter(persona -> persona.getNombre().contains("M"))
+                .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+
     }
 
 
