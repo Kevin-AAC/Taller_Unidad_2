@@ -42,9 +42,11 @@ public class PersonasPrincipal {
         for (Persona persona : personas) {
             System.out.println(persona);
         }
+        System.out.println("====================================");
     }
     public void CantidadPersonas() {
         System.out.println("\nTotal de personas registradas: " + personas.size());
+        System.out.println("====================================");
     }
     public void PromedioEdadPersona() {
         int sumaEdad = 0;
@@ -53,7 +55,7 @@ public class PersonasPrincipal {
         }
         double promedio = (double) sumaEdad / personas.size();
         System.out.printf("La edad promedio es: %.2f%n", promedio);
-
+        System.out.println("====================================");
 
     }
     public void MayoresDeEdadPersona() {
@@ -61,20 +63,32 @@ public class PersonasPrincipal {
                 .filter(persona -> persona.getEdad() > 18)
                 .count();
         System.out.println("Numero de mayores de edad: "+ mayores);
+        System.out.println("====================================");
     }
     public void PersonasConInicialA(){
         System.out.println("Personas cuyos nombres empiecen con “A”:");
         personas.stream()
                 .filter(persona -> persona.getNombre().startsWith("A"))
                 .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+        System.out.println("====================================");
     }
 
     public void ApellidosContenganM(){
         System.out.println("Personas cuyos apellidos contengan “M”:");
         personas.stream()
-                .filter(persona -> persona.getNombre().contains("M"))
+                .filter(persona -> persona.getApellido().contains("m"))
                 .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+        System.out.println("====================================");
 
+    }
+
+    public void FiltroPersonaEspecial(){
+        System.out.println("Personas con cargo de director de género masculino (M)");
+        personas.stream()
+                .filter(persona -> persona.getCargo().equalsIgnoreCase("director"))
+                .filter(persona -> persona.getGenero().equalsIgnoreCase("masculino"))
+                .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+        System.out.println("====================================");
     }
 
 
