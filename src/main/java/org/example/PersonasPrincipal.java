@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 public class PersonasPrincipal {
     Scanner scanner = new Scanner(System.in);
@@ -113,6 +110,14 @@ public class PersonasPrincipal {
             System.out.println("Sueldo por hora: $" + desarrollador.getSueldoHora());
 
         }
+    }
+    public void MujeresOrdenadasPorNombre(){
+        System.out.println("Mujeres Ordenadas por nombre:");
+        personas.stream()
+                .filter(persona -> persona.getGenero().equalsIgnoreCase("femenino"))
+                .sorted(Comparator.comparing(Persona::getNombre))
+                .forEach(persona -> System.out.println(persona.getNombre() + " " + persona.getApellido()));
+        System.out.println("***********************************************8");
     }
 
 
